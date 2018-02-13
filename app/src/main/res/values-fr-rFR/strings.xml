@@ -6,7 +6,16 @@
     <string name="ButtonText">I\’m a button</string>
     <string name="Login">login name</string>
     <string name="password">password</string>
-    <string name="loginname">name</string>
+    <string name="loginname">nemsm</string>
+    <string name="RadioButton"> Button a adio</string>
+    <string name="CheckBox">Nannao</string>
+    <string name="checkBox2">ChequeboxBox</string>
+    <string name="switch1">What does this do?</string>
+    <string name="loginbtn">LOGIN</string>
+    <string name="dialog_message">Do you want to exit?</string>
+    <string name="dialog_title">Welcome</string>
+    <string name="ok">Yes</string>
+    <string name="content_description">imageview</string>
 
 
 </resources>

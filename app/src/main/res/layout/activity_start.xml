@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.patel.androidlabs.StartActivity">
 
     <TextView
@@ -20,7 +21,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ButtonText"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="143dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Startbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/StartChat"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

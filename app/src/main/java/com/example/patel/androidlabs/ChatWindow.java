@@ -2,6 +2,7 @@ package com.example.patel.androidlabs;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,36 +18,45 @@ import java.util.List;
 
 public class ChatWindow extends Activity {
 
+
+
+    ArrayList<String> list = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
 
 
-        ChatAdapter messageAdapter =new ChatAdapter( this );
-        ListView.
+        final ChatAdapter messageAdapter =new ChatAdapter( this );
 
 
 
 
-        ListView ChatList = (ListView) findViewById(R.id.chatview);
+
+      final  ListView ChatList = (ListView) findViewById(R.id.chatView);
 
 
+         ChatList.setAdapter(messageAdapter);
 
         final EditText ChatEdit = (EditText) findViewById(R.id.ChatEdit);
 
-        final Button Chatbtn = (Button) findViewById(R.id.chatbtn);
+         Button Chatbtn1 = (Button) findViewById(R.id.Chatbtn);
 
-        final ArrayList<String> list = new ArrayList<>();
+
         for (int i = 0; i < ChatEdit.length(); i++) {
 
             list.add(ChatEdit.toString());
 
-            Chatbtn.setOnClickListener(new View.OnClickListener() {
+            Chatbtn1.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
                     list.add(ChatEdit.toString());
+                    messageAdapter.notifyDataSetChanged();
+                    ChatEdit.setText("");
+
+                    Intent intent = new Intent(ChatWindow.this,ChatWindow.class);
+
                 }
             });
 
@@ -58,7 +68,7 @@ public class ChatWindow extends Activity {
 
     }
 
-    class ChatAdapter extends ArrayAdapter<String> {
+   private class ChatAdapter extends ArrayAdapter<String> {
 
 
 
@@ -88,12 +98,12 @@ public class ChatWindow extends Activity {
 
             View result = null ;
             if(position%2 == 0)
-                result = inflater.inflate(R.layout.chat_row_incoming, null);
+                result = inflater.inflate(R.layout.chat_row_incoming,null);
             else
-                result = inflater.inflate(R.layout.chat_row_outgoing, null);
+                result = inflater.inflate(R.layout.chat_row_outgoing,null);
 
 
-            TextView message = (TextView)result.findViewById(R.id.chatview);
+            TextView message = (TextView)result.findViewById(R.id.chatView);
             message.setText(   getItem(position)  ); // get the string at position
             return result;
 

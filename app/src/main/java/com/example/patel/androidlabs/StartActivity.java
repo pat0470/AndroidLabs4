@@ -17,6 +17,22 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+         Button Startbtn3 = (Button)findViewById(R.id.Startbtn);
+
+        Startbtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.i(ACTIVITY_NAME,"User clicked Start Chat");
+
+                Intent intent = new Intent(StartActivity.this,ChatWindow.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         Button button2 = (Button) findViewById(R.id.button);
@@ -29,6 +45,8 @@ public class StartActivity extends Activity {
                 final Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivity(intent);
                 startActivityForResult(intent, 50);
+
+
 
 //                onActivityResult(int requestCode, int resultCode, Intent data){
 //                    if (requestCode == 50) {
@@ -79,5 +97,11 @@ public class StartActivity extends Activity {
         super.onDestroy();
 
         Log.i(ACTIVITY_NAME, "In onDestroy()");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 }
