@@ -48,7 +48,7 @@ public class ListItemsActivity extends Activity {
         });
 
 
-        Switch sw = (Switch)  findViewById(R.id.switch1);
+        Switch sw = (Switch)  findViewById(R.id.switch2);
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
@@ -91,6 +91,7 @@ public class ListItemsActivity extends Activity {
                         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
                         resultIntent.putExtra("Response", "Here is my response");
                         setResult(Activity.RESULT_OK, resultIntent);
+                        startActivity(resultIntent);
                         finish();
 
                     }
