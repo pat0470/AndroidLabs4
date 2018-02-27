@@ -8,13 +8,13 @@
 
 
     <ImageView
-        android:id="@+id/message_text"
-        android:layout_width="wrap_content"
+        android:layout_width="32dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@drawable/row_even" />
 
     <TextView
+        android:id="@+id/message_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

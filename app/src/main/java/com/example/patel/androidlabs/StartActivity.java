@@ -64,40 +64,40 @@ public class StartActivity extends Activity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+            @Override
+            protected void onResume() {
+                super.onResume();
 
-        Log.i(ACTIVITY_NAME, "In onResume()");
-    }
+                Log.i(ACTIVITY_NAME, "In onResume()");
+            }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+            @Override
+            protected void onStart() {
+                super.onStart();
 
-        Log.i(ACTIVITY_NAME, "In onStart()");
-    }
+                Log.i(ACTIVITY_NAME, "In onStart()");
+            }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
+            @Override
+            protected void onPause() {
+                super.onPause();
 
-        Log.i(ACTIVITY_NAME, "In onPause()");
-    }
+                Log.i(ACTIVITY_NAME, "In onPause()");
+            }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
+            @Override
+            protected void onStop() {
+                super.onStop();
 
-        Log.i(ACTIVITY_NAME, "In onStop()");
-    }
+                Log.i(ACTIVITY_NAME, "In onStop()");
+            }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+            @Override
+            protected void onDestroy() {
+                super.onDestroy();
 
-        Log.i(ACTIVITY_NAME, "In onDestroy()");
-    }
+                Log.i(ACTIVITY_NAME, "In onDestroy()");
+            }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
