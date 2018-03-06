@@ -5,10 +5,7 @@
     <!-- <uses-feature> -->
     <!-- android:name="android.hardware.camera" -->
     <!-- android:required="true"> -->
-
-
     <!-- </uses-feature> -->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,12 +22,12 @@
         </activity>
         <activity android:name=".LoginActivity">
 
-             <!--<intent-filter>-->
-             <!--<action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-             <!--<category android:name="android.intent.category.LAUNCHER" />-->
-             <!--</intent-filter>-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
         <activity android:name=".ListItemsActivity">
@@ -44,16 +41,13 @@
 
         </activity>
         <activity android:name=".ChatWindow">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
         </activity>
+        <activity android:name=".ChatDatabaseHelper"></activity>
     </application>
 
 </manifest>
