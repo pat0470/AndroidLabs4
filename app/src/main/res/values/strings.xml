@@ -14,8 +14,16 @@
     <string name="Response">here is my response</string>
     <string name="StartChat">StartChat</string>
     <string name="Chatbtn">SEND</string>
+    <string name="wtrbtn">Weather</string>
+
+    <string name="Notification">notification</string>
+    <string name="kharising">notification</string>
+    <string name="choice">notification</string>
+    <string name="cancel">Yes</string>
 
 
-    <string name="ok">Yes</string>
+    <string name="ok">NO</string>
     <string name="content_description">imageview</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

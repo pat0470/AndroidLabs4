@@ -12,6 +12,11 @@ public class StartActivity extends Activity {
     protected static final String ACTIVITY_NAME = "StartActivity";
     int requestCode, resultCode;
 
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +65,27 @@ public class StartActivity extends Activity {
 
             }
         });
+
+        Button button3 =(Button)findViewById(R.id.weather);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent= new Intent(StartActivity.this,WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button toolbarbtn = (Button)findViewById(R.id.toolbar);
+        toolbarbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = new Intent( StartActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }
